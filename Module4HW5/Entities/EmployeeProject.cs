@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Module4HW3.Entities
+namespace Module4HW5.Entities
 {
     public class EmployeeProject
     {
@@ -8,8 +8,8 @@ namespace Module4HW3.Entities
         public decimal Rate { get; set; }
         public DateTime StartDate { get; set; }
         public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public virtual Employee Employee { get; set; }
         public int ProjectId { get; set; }
-        public Project Project { get; set; }
+        public virtual Project Project { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace Module4HW3.Entities
+namespace Module4HW5.Entities
 {
     public class Title
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<Employee> Employees { get; set; }
+        public virtual List<Employee> Employees { get; set; }
     }
 }

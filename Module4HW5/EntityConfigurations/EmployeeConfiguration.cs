@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Module4HW3.Entities;
+using Module4HW5.Entities;
 
-namespace Module4HW3.EntitiyConfigurations
+namespace Module4HW5.EntityConfigurations
 {
     public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
     {
         public void Configure(EntityTypeBuilder<Employee> builder)
         {
-            builder.ToTable("Employee").HasKey(e => e.EmployeeId);
-            builder.Property(e => e.EmployeeId).IsRequired().ValueGeneratedOnAdd();
+            builder.ToTable("Employee").HasKey(e => e.Id);
+            builder.Property(e => e.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Property(e => e.FirstName).HasColumnType("nvarchar").IsRequired().HasMaxLength(50);
             builder.Property(e => e.LastName).HasColumnType("nvarchar").IsRequired().HasMaxLength(50);
             builder.Property(e => e.HiredDate).HasColumnType("datetime2").IsRequired().HasMaxLength(7);
